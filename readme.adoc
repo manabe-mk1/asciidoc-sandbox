@@ -1,0 +1,44 @@
+= ドキュメントビルド手順
+
+== 必須環境
+
+* Ruby (>=2.2)
+* Java (JRE)
+* 日本語フォント
+* Graphviz
+
+== インストール
+
+下記は Windows Subsystem for Linux 上の Ubuntu でのインストール例
+
+----
+sudo apt install ruby default-jre fonts-takao graphviz
+----
+----
+sudo gem install rouge pygments.rb coderay asciidoctor asciidoctor-diagram
+sudo gem install --pre asciidoctor-pdf
+sudo gem install asciidoctor-pdf-cjk asciidoctor-pdf-cjk-kai_gen_gothic
+sudo asciidoctor-pdf-cjk-kai_gen_gothic-install
+----
+
+== 使用方法
+
+章を追加する際は contents/*.adoc ファイルを追加した後に、main.adoc で読み込む
+
+----
+ include::contents/*.adoc[]
+----
+
+== ビルド手順
+
+PDF出力
+
+----
+rake
+----
+
+中間データを含む生成物の削除(キャッシュクリア)
+
+----
+rake clean
+----

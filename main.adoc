@@ -1,0 +1,57 @@
+////////////////////
+//      設定
+////////////////////
+
+:doctype: book
+
+:source-highlighter: coderay
+
+// セクションに番号を付ける 5階層まで
+:sectnums:
+:sectnumlevels: 5
+
+// セクション番号の後ろに文字を付けられないので
+// ラベルは空文字にしている
+// PDFに適用するためには目次の前に置かなければならない？
+:chapter-label:
+
+// 図表のラベル文字
+:table-caption: 表
+:figure-caption: 図
+
+// 内部参照に "1.1.1 タイトル" のようなセクション番号を付ける
+// 改定履歴で :xrefstyle: short を使いたいのでここでは設定不可とする
+// :xrefstyle: full
+
+// 内部参照用セクション番号のラベル文字
+:chapter-refsig:
+:section-refsig:
+
+// PlantUML用設定ファイル
+:plantumlconfig: plantuml.conf
+
+////////////////////
+//    コンテンツ
+////////////////////
+
+= Asciidocs ドキュメントテスト
+W. Anonymous <anonymous@writer.jp>
+
+// 目次 5階層まで
+:toc:
+:toclevels: 5
+:toc-title: 目次
+
+== 章
+
+テスト文字列
+
+== 改定履歴
+
+:xrefstyle: short
+
+[format="csv", options="header"]
+|===
+改定日,改定内容,改定者,変更箇所(章番号)
+include::histories/contents.csv[]
+|===

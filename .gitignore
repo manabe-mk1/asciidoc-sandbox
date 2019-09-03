@@ -1,0 +1,13 @@
+#
+# Temporaries
+#
+.asciidoctor/
+diagram/
+histories/
+*.pdf
+
+#
+# IDE config
+#
+.idea/
+.phpstorm.meta.php
